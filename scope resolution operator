@@ -1,0 +1,46 @@
+#include <iostream>
+
+// Class declaration
+class MyClass {
+private:
+    int data;
+
+public:
+    // Constructor
+    MyClass(int value) : data(value) {}
+
+    // Member function declaration
+    void setData(int value);
+
+    void displayData();
+};
+
+// Definition of setData() function using scope resolution operator
+void MyClass::setData(int value) {
+    data = value;
+}
+
+// Definition of displayData() function using scope resolution operator
+void MyClass::displayData() {
+    std::cout << "Data: " << data << std::endl;
+}
+
+int main() {
+    // Creating an object of MyClass
+    MyClass obj(10);
+
+    // Using member functions
+    obj.displayData(); // Output: Data: 10
+
+    obj.setData(20);
+    obj.displayData(); // Output: Data: 20
+
+    return 0;
+}
+
+
+
+
+
+
+
